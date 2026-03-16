@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item
+        component="ComponentInfo{com.whatsapp/com.whatsapp.HomeActivity}"
+        drawable="ic_whatsapp" />
+    <item
+        component="ComponentInfo{com.instagram.android/com.instagram.android.activity.MainTabActivity}"
+        drawable="ic_instagram" />
+</resources>
