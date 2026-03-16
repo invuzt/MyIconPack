@@ -1,11 +1,23 @@
 package com.myiconpack
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.os.Bundle
+import android.webkit.WebView
+import android.webkit.WebViewClient
+import android.webkit.WebSettings
 
 class MainActivity : Activity() {
+    @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        finish()
+        val webView = WebView(this)
+        setContentView(webView)
+        val settings: WebSettings = webView.settings
+        settings.javaScriptEnabled = true
+        settings.domStorageEnabled = true
+        settings.allowFileAccess = true
+        webView.webViewClient = WebViewClient()
+        webView.loadUrl("file:///android_asset/laporan.html")
     }
 }
